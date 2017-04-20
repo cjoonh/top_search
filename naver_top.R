@@ -5,7 +5,6 @@ navertop <- function(L) {
 text=readLines("http://www.naver.com/")
 Encoding(text)="UTF-8"
 text_sub=text[434:553]
-
 navertop_text<-rep(0,L)
 for(n in 1:L){
   start_p=gregexpr(text_sub[(n*6)], pattern=">")[[1]][1]+1
